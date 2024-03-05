@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+            <h6>Laptop Gamer AMD</h6>
+            <P>
+                Precio base : $
+                <span class="precio-inicial"></span>
+            </P>
+            <p>
+                Cantidad:
+                <span class="cantidad"></span>
+                <button onclick="
+                precio = document.querySelector('.precio-inicial');
+                cantidad = document.querySelector('.cantidad');
+                nuevaCantidad = Number(cantidad.innerHTML) + 1;
+                cantidad.innerHTML = nuevaCantidad;
+                pago = document.querySelector('.pago');
+                nuevoPrecio = Number(precio.innerHTML)*nuevaCantidad;
+                pago.innerHTML = nuevoPrecio
+                ">+</button>
+
+                <button onclick="
+                precio = document.querySelector('.precio-inicial');
+                cantidad = document.querySelector('.cantidad');
+                nuevaCantidad = Number(cantidad.innerHTML) - 1;
+                cantidad.innerHTML = nuevaCantidad;
+                pago = document.querySelector('.pago');
+                nuevoPrecio = Number(precio.innerHTML)*nuevaCantidad;
+                pago.innerHTML = nuevoPrecio
+                ">-</button>
+            </p>
+        </div>
+    </section>
+    <div class="total-section">
+        <p>
+            Total a pagar : $
+            <span class="pago"></span>
+        </p>
+    </div>
+    <script src="./Assets/JS/index.js"></script>
+</body>
+
+
+</html>
